@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2024 at 03:59 PM
+-- Generation Time: Aug 31, 2024 at 09:01 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mashrur`
+-- Database: `sub`
 --
 
 -- --------------------------------------------------------
@@ -28,17 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `student` (
-  `ID` int(10) NOT NULL,
-  `Name` text NOT NULL,
-  `Course` text NOT NULL
+  `ID` int(11) NOT NULL,
+  `Name` varchar(30) DEFAULT NULL,
+  `Course` varchar(30) DEFAULT NULL,
+  `Depertment` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`ID`, `Name`, `Course`) VALUES
-(123, 'Mashrur', 'DBMS');
+INSERT INTO `student` (`ID`, `Name`, `Course`, `Depertment`) VALUES
+(1, 'Mashrur', 'DBMS', 'CSE'),
+(2, 'Kamal', 'DBMS', 'CSE'),
+(3, 'Jamal', 'EEE', 'CSE'),
+(4, 'Rahman', 'MATH', 'CSE'),
+(5, 'Hasan', NULL, NULL);
 
 --
 -- Indexes for dumped tables
